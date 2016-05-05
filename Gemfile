@@ -35,3 +35,8 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'rubocop'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
