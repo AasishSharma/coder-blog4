@@ -1,0 +1,52 @@
+<!-- Page Header -->
+<% content_for :title do %>Contact<% end %>
+<header class="intro-header" style="background-color: black">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Contact Me</h1>
+            <hr class="small">
+              <span class="subheading">Have questions? I have answers (maybe).</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <p>Want to get in touch with me? Fill out the form below to send me a message and I will try to get back to you within 24 hours!</p>
+      <%= form_for @contact do |form| %>
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= form.text_field :name, placeholder: 'Name', :class => 'form-control' %>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= form.text_field :email, placeholder: 'Email Address', :class => 'form-control' %>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= form.text_field :phone, placeholder: 'Phone Number', :class => 'form-control' %>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= form.text_area :message, placeholder: 'Message', :class => 'form-control' %>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="form-group col-xs-12">
+            <%= form.submit "Send", :class => "btn btn-default" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
